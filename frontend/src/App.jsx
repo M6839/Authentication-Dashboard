@@ -17,11 +17,12 @@ export default function App() {
   return (
     <AuthProvider>
       <ToastContainer />
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
         <Route
           path="/dashboard"
           element={
@@ -30,8 +31,10 @@ export default function App() {
             </PrivateRoute>
           }
         />
-        <Route path="*" element={<Navigate to="/dashboard" />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
     </AuthProvider>
   );
 }
