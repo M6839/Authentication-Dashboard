@@ -99,9 +99,28 @@ Auth
 
 POST /api/auth/register
 
+ex: {  "name":"kiran",
+    "email":"mkirankumar6839@gmail.com",
+   "password":"kiran123"
+}
+
 POST /api/auth/login
 
+ex: { 
+    "email":"mkirankumar6839@gmail.com",
+   "password":"kiran123"
+}
+
 GET /api/auth/me
+
+ex: {
+    "_id": "698b100d7138caf5b880c5f0",
+    "name": "kiran",
+    "email": "mkirankumar6839@gmail.com",
+    "createdAt": "2026-02-10T11:01:33.549Z",
+    "updatedAt": "2026-02-10T11:01:33.549Z",
+    "__v": 0
+}
 
 POST /api/auth/logout
 
@@ -109,8 +128,30 @@ Tasks
 
 GET /api/tasks
 
+ex:  [
+{
+   "_id": "698b2edd2027552e98d8c665",
+        "title": "Developing a website",
+        "description": "developing a ecmorce website for auth",
+        "status": "pending",
+        "user": "698b100d7138caf5b880c5f0",
+        "createdAt": "2026-02-10T13:13:01.051Z",
+        "updatedAt": "2026-02-10T13:13:01.051Z",
+        "__v": 0
+    }
+]
+
+
 POST /api/tasks
 
+ex:  {  
+    "title":"Developing a website",
+    "description":"developing a ecmorce website for auth"
+}
+
+
 PUT /api/tasks/:id
+
+
 
 DELETE /api/tasks/:id
