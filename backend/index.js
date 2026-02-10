@@ -44,6 +44,6 @@ console.log('Mongodb connected succefullly')
 .catch(err => console.error(err));
 
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log(`server running on port ${process.env.PORT}`)
 })
