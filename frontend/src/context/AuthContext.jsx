@@ -1,3 +1,8 @@
+import { createContext, useContext, useEffect, useState } from 'react';
+import axios from '../services/api';
+
+const AuthContext = createContext();
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,3 +33,6 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+
+export const useAuth = () => useContext(AuthContext);
