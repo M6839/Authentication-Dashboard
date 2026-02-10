@@ -23,14 +23,6 @@ app.use(
   })
 );
 
-app.options("*", cors({
-  origin: [
-    "http://localhost:5173",
-    "https://authentication-dashboard-iota.vercel.app",
-  ],
-  credentials: true,
-}));
-
 app.use(express.json());
 
 
